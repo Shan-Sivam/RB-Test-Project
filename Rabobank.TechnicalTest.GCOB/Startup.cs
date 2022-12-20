@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Rabobank.TechnicalTest.GCOB.Repositories;
+using Rabobank.TechnicalTest.GCOB.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,8 @@ namespace Rabobank.TechnicalTest.GCOB
         {
             services.AddScoped<ICustomerRepository, InMemoryCustomerRepository>();
             services.AddScoped<ICountryRepository, InMemoryCountryRepository>();
-            
+            services.AddScoped<ICustomerService, CustomerService>();
+
             services.AddControllers();
         }
 
