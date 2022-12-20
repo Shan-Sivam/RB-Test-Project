@@ -22,16 +22,16 @@ namespace Rabobank.TechnicalTest.GCOB.Controllers
             _customerService = customerService;
         }
 
-        [HttpGet]
-        public async Task<IEnumerable<Customer>> Get()
+        [HttpGet("{id}")]
+        public async Task<Customer> Get(int id)
         {
-            return await _customerService.GetAllCustomers();
+            return await _customerService.GetCustomer(id);
         }
 
         [HttpPost]
         public async Task<Customer> Post([FromBody] CustomerDto customer)
         {
-            return await _customerService.CreateCustomer(customer);
+            return  await _customerService.CreateCustomer(customer);
         }
     }
 }

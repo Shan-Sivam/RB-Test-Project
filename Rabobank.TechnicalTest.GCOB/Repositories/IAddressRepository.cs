@@ -5,9 +5,12 @@ namespace Rabobank.TechnicalTest.GCOB.Repositories
 {
     public interface IAddressRepository
     {
+        Task<AddressDto> GetAsync(int identity);
+
         Task<int> GenerateIdentityAsync();
+
         Task InsertAsync(AddressDto address);
-        Task<CustomerDto> GetAsync(int identity);
+        
         Task UpdateAsync(AddressDto address);
     }
 }

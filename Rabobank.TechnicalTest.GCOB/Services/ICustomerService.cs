@@ -7,7 +7,7 @@ namespace Rabobank.TechnicalTest.GCOB.Services
     public interface ICustomerService
     {
         Task<Customer> CreateCustomer(CustomerDto customer);
-        Task<IEnumerable<Customer>> GetAllCustomers();
+
         Task<Customer> GetCustomer(int customerId);
     }
 }

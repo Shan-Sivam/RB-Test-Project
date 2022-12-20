@@ -32,6 +32,8 @@ namespace Rabobank.TechnicalTest.GCOB
             services.AddScoped<ICustomerService, CustomerService>();
 
             services.AddControllers();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +41,8 @@ namespace Rabobank.TechnicalTest.GCOB
         {
             if (env.IsDevelopment())
             {
+                app.UseSwagger();
+                app.UseSwaggerUI();
                 app.UseDeveloperExceptionPage();
             }
 

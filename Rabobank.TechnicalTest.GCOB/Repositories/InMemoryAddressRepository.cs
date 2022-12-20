@@ -27,10 +27,5 @@ namespace Rabobank.TechnicalTest.GCOB.Repositories
         {
             throw new System.NotImplementedException();
         }
-
-        Task<CustomerDto> IAddressRepository.GetAsync(int identity)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
