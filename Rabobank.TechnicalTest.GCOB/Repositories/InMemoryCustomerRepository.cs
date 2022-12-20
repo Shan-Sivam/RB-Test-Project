@@ -12,11 +12,11 @@ namespace Rabobank.TechnicalTest.GCOB.Repositories
         private ConcurrentDictionary<int, CustomerDto> Customers { get; } = new ConcurrentDictionary<int, CustomerDto>();
         private ILogger _logger;
 
-        public InMemoryCustomerRespository(ILogger logger)
+        public InMemoryCustomerRepository(ILogger logger)
         {
             _logger = logger;
         }
-
+       
         public Task<int> GenerateIdentityAsync()
         {
             _logger.LogDebug("Generating Customer identity");
